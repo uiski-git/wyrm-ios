@@ -699,7 +699,7 @@ static int display_max_fps(void) {
 static void apply_frame_interval(void) {
   if (!engine.wnd) return;
   int max = display_max_fps();
-  int target = frame_idle ? 30 : max;
+  int target = frame_idle ? 120 : max;
   if (target > max) target = max;
   if (target < 1) target = 1;
   int interval = (int)lround((double)max / (double)target);
